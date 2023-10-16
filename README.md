@@ -13,6 +13,17 @@ Setup (Part 1)
 
 Some dependency imports provided in starter file.
 
+The following sections were also provided:
+
+    # Create an instance of MongoClient
+    mongo = MongoClient(port=27017)
+
+    # assign the uk_food database to a variable name
+    db = mongo['uk_food']
+
+    # assign the collection to a variable
+    establishments = db['establishments']
+
 Bigyan from AskBCS helped with the importing of the database via the command line as my mongoimport was not set up properly:
 
     mongoimport --type json -d uk_food -c establishments --drop --jsonArray establishmens.json
@@ -56,4 +67,21 @@ The following section was provided in the starter code:
     # Set non 1-5 Rating Values to Null
     non_ratings = ["AwaitingInspection", "Awaiting Inspection", "AwaitingPublication", "Pass", "Exempt"]
     establishments.update_many({"RatingValue": {"$in": non_ratings}}, [ {'$set':{ "RatingValue" : None}} ])
+
+--------------------------------------------------
+Setup (Analysis File)
+--------------------------------------------------
+
+Some dependency imports provided in starter file.
+
+The following sections were also provided:
+
+    # Create an instance of MongoClient
+    mongo = MongoClient(port=27017)
+
+    # assign the uk_food database to a variable name
+    db = mongo['uk_food']
+
+    # assign the collection to a variable
+    establishments = db['establishments']
 
