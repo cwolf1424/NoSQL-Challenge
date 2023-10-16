@@ -85,3 +85,4 @@ The following sections were also provided:
     # assign the collection to a variable
     establishments = db['establishments']
 
+
